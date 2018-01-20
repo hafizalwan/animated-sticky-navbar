@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+/*=== This is what happen when scrolled (height should be smaller than logo img)===*/
+nav.black {
+    background: rgba(0, 0, 0, .8);
+    height: 50px;
+    padding: 10px 50px;
+}
+
+/*=== define the height if using logo img (when not scrolled) ===*/
+.logo {
+    float: left;
+    transition: .5s;
+}
+
+/*=== use this to resize if using logo img (when scrolled)
+.logo .black {
+    height: 30px;
+}
+===*/
+
+nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 50px;
+    color: #262626;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+/*=== Please define the menu color when scrolled and line height should be lower than line height above ===*/
+nav.black ul li a {
+    color: #fff;
+    line-height: 25px;
+}
+
+section.sec1 {
+    width: 100%;
+    height: 100vh;
+    background: url(background1.jpeg);
+    background-size: cover;
+}
+
+section.sec2 {
+    padding: 100px;
+}
+
+.content-title {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+}
+.content {
+    margin: 20px 0 0;
+    padding: 0;
+    font-size: 1.2em;
+}

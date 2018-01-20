@@ -5,40 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Animated Sticky Navbar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
     <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- This is the main thing that you need to animate the navbar.
+    1. Just use jquery cdn
+    2. And that JS code below -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll', function(){
+            if ($(window).scrollTop()){
+                $('nav').addClass('black');
+                }
+                else {
+                    $('nav').removeClass('black');
+                }
+            })
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar Brand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarsExample04">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menu 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menu 2</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menu 3</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
-          </form>
-        </div>
-      </nav>
 
-    <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="popper.min.js"></script>
-    <script src="bootstrap.min.js"></script>
+    <!-- If you already familiar with HTML and CSS you can play around and create your 
+    own navbar. You dont have to follow whatever I have created. -->
+    <nav>
+        <div class="logo">
+            <!-- Iam using bootstrap class here just because Iam too lazy atm to find/make a new logo -->
+            <a href="#" class="navbar-brand">Navbar Brand</a>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="sec1"></section>
+    <section class="sec2">
+        <h1 class="content-title">The Big Title</h1>
+        <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Nesciunt reiciendis exercitationem aspernatur cum ipsam mollitia quam vero natus quasi! 
+            Laborum quas fugiat voluptas dolore, sequi expedita tempora, 
+            ipsam quis porro rem aliquid quam hic perspiciatis quisquam consectetur nisi odit 
+            aspernatur quos in alias minima ratione? Consequuntur ducimus natus exercitationem assumenda eligendi impedit, 
+            eius, dolore repudiandae quaerat totam ipsa officia deserunt pariatur quia dolorem numquam omnis. 
+            Repudiandae architecto, officiis atque vero libero rerum, 
+            inventore incidunt maiores cum amet corporis mollitia ut dicta explicabo vel asperiores facilis, 
+            odio consectetur animi deleniti error earum! Ipsum amet illum exercitationem laboriosam eum adipisci dolores veritatis.</p>
+    </section>
+
 </body>
 </html>
